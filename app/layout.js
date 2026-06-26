@@ -1,36 +1,37 @@
-import "@fontsource/fraunces/400.css";
-import "@fontsource/fraunces/500.css";
-import "@fontsource/fraunces/600.css";
-import "@fontsource/fraunces/400-italic.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
 import "@fontsource/jetbrains-mono/400.css";
-import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/jetbrains-mono/700.css";
+import "@fontsource/jetbrains-mono/800.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/600.css";
 import "./globals.css";
 
 export const metadata = {
-  title: "Eugenio Lobo | Full Stack Developer & Software Engineer",
+  title: "Eugenio Guimaraes | Backend Engineer",
   description:
-    "Portfólio de Eugenio Lobo, Full Stack Developer e Software & Data Engineer com experiência em Python, Go, .NET, Next.js e infraestrutura em nuvem.",
+    "Portfolio de Eugenio Guimaraes, Backend Engineer especializado em sistemas distribuídos, pipelines de dados com IA e infraestrutura cloud. Python, Go, .NET, GCP, AWS.",
   keywords: [
-    "Eugenio Lobo",
-    "Full Stack Developer",
+    "Eugenio Guimaraes",
+    "Backend Engineer",
     "Software Engineer",
     "Data Engineer",
+    "Sistemas Distribuídos",
     "Python",
     "Go",
-    "Next.js",
+    "Golang",
     "Django",
-    "Nest.js",
     ".NET",
+    "GCP",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+    "IA aplicada",
   ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className="bg-bg font-sans text-ink">{children}</body>
+      <body className="bg-bg font-sans text-fg">{children}</body>
     </html>
   );
 }

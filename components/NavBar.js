@@ -14,25 +14,29 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "border-b border-hairline bg-bg/90 backdrop-blur" : "border-b border-transparent"
+      className={`fixed left-0 right-0 top-0 z-[100] transition-all duration-300 ${
+        scrolled ? "border-b border-line bg-bg/90 backdrop-blur" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-content items-center justify-between px-8 py-[1.1rem]">
-        <a href="#topo" className="font-serif text-lg tracking-wide text-ink">
-          Eugenio Lobo
-        </a>
-        <div className="hidden gap-8 sm:flex">
-          {NAV_LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="font-sans text-sm tracking-wide text-inkMuted transition-colors hover:text-gold"
-            >
-              {l.label}
-            </a>
-          ))}
+      <div className="mx-auto flex max-w-content flex-wrap items-center justify-between gap-4 px-6 py-4 font-mono text-sm">
+        <div className="flex items-center gap-1.5">
+          <span className="text-phosphor terminal-glow">eugenio@portfolio</span>
+          <span className="text-faint">:</span>
+          <span className="text-gold">~</span>
+          <span className="animate-blink ml-0.5 inline-block h-4 w-[0.55rem] bg-phosphor align-middle" />
         </div>
+        <ul className="hidden flex-wrap gap-x-6 gap-y-2 sm:flex">
+          {NAV_LINKS.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                className="text-fg/70 transition-colors hover:text-phosphor"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );

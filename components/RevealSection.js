@@ -16,7 +16,7 @@ export default function RevealSection({ id, className = "", children }) {
           obs.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -26,7 +26,7 @@ export default function RevealSection({ id, className = "", children }) {
     <section
       id={id}
       ref={ref}
-      className={`mx-auto max-w-content px-8 py-32 transition-all duration-700 ${
+      className={`mx-auto max-w-content scroll-mt-20 px-6 py-24 transition-all duration-700 ${
         visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       } ${className}`}
     >

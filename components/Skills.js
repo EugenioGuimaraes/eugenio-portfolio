@@ -1,29 +1,40 @@
 import RevealSection from "./RevealSection";
 import SectionLabel from "./SectionLabel";
-import { SKILL_GROUPS } from "@/lib/content";
+import { STACK } from "@/lib/content";
+
+const levelColor = {
+  EXCELLENT:  "text-phosphor",
+  PROFICIENT: "text-gold",
+  LEARNING:   "text-muted",
+};
 
 export default function Skills() {
   return (
-    <RevealSection id="skills">
-      <SectionLabel index="III." title="Stack técnica" />
-      <div className="grid grid-cols-1 gap-px border border-hairline bg-hairline sm:grid-cols-2 lg:grid-cols-3">
-        {SKILL_GROUPS.map((group) => (
-          <div key={group.title} className="bg-bgRaised p-8">
-            <p className="mb-4 font-mono text-xs uppercase tracking-wide text-goldDim">
-              {group.title}
-            </p>
-            <div className="flex flex-wrap gap-2.5">
-              {group.items.map((item) => (
-                <span
-                  key={item}
-                  className="rounded-sm border border-hairline bg-bgCard px-3.5 py-1.5 font-sans text-sm text-ink"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+    <RevealSection id="stack">
+      <SectionLabel index="03" title="Main_Processors" />
+
+      <div className="border border-line bg-card/40 p-6 md:p-8">
+        <div className="mb-6 flex items-center justify-between border-b border-line pb-3">
+          <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-gold">
+            Core Stack
+          </span>
+          <span className="font-mono text-[10px] text-muted">
+            {STACK.length} processors
+          </span>
+        </div>
+        <ul className="space-y-3 font-mono text-sm">
+          {STACK.map((s) => (
+            <li
+              key={s.name}
+              className="flex items-center justify-between border-b border-line/40 pb-2 last:border-b-0"
+            >
+              <span className="text-fg/85">{s.name}</span>
+              <span className={levelColor[s.level] ?? "text-muted"}>
+                [{s.level}]
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </RevealSection>
   );

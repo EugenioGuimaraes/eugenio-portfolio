@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Seal from "./Seal";
 
-const FULL_TEXT = "engenheiro de sistemas distribuídos.";
+const SUBTITLE = "> engenheiro de sistemas distribuídos";
 
 export default function Hero() {
   const [typed, setTyped] = useState("");
@@ -12,57 +11,53 @@ export default function Hero() {
     let i = 0;
     const interval = setInterval(() => {
       i++;
-      setTyped(FULL_TEXT.slice(0, i));
-      if (i >= FULL_TEXT.length) clearInterval(interval);
+      setTyped(SUBTITLE.slice(0, i));
+      if (i >= SUBTITLE.length) clearInterval(interval);
     }, 38);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section
-      id="topo"
-      className="relative mx-auto flex min-h-screen max-w-content flex-col justify-center px-8 pb-24 pt-32"
-    >
-      <div className="absolute right-8 top-10 opacity-55">
-        <Seal size={44} />
-      </div>
-
-      <p className="mb-6 font-mono text-[13px] uppercase tracking-[0.2em] text-gold">
-        Brasília, Brasil
+    <header className="mb-28 pt-28">
+      <p className="mb-4 font-mono text-sm font-bold uppercase tracking-[0.25em] text-phosphor terminal-glow">
+        {typed}
+        {typed.length < SUBTITLE.length && (
+          <span className="animate-blink ml-1 inline-block h-[0.9em] w-[0.5ch] translate-y-[0.1em] bg-phosphor align-baseline" />
+        )}
       </p>
 
-      <h1 className="mb-7 max-w-[880px] font-serif text-[clamp(40px,7vw,76px)] font-semibold leading-[1.05] tracking-[-0.02em] text-ink">
-        Eugenio Lobo projeta e constrói{" "}
-        <span className="italic text-gold">sistemas</span> que funcionam de verdade.
+      <h1 className="mb-8 font-mono text-5xl font-extrabold tracking-tighter terminal-glow-strong md:text-7xl lg:text-8xl">
+        EUGENIO
+        <br />
+        GUIMARAES
+        <span className="animate-blink ml-3 inline-block h-[0.7em] w-[0.5ch] translate-y-[0.05em] bg-phosphor align-baseline" />
       </h1>
 
-      <p className="mb-10 min-h-[1.6em] font-mono text-base text-inkMuted">
-        <span className="text-steel">&gt; </span>
-        {typed}
-        <span className="cursor-blink ml-1 inline-block h-4 w-2 bg-gold align-middle" />
-      </p>
+      <div className="max-w-2xl">
+        <p className="text-pretty text-lg leading-relaxed text-fg/80 md:text-xl">
+          Construindo sistemas que escalam e sobrevivem à produção com obsessão
+          por arquitetura sólida e performance bruta.{" "}
+          <span className="font-mono italic text-gold">
+            // backend first, sempre.
+          </span>
+        </p>
+      </div>
 
-      <p className="mb-12 max-w-[620px] font-sans text-[17px] leading-[1.7] text-inkMuted">
-        Full Stack Developer e Software &amp; Data Engineer, com experiência em
-        desenvolvimento backend, pipelines de dados potencializados por IA e
-        infraestrutura em nuvem. Atuo com Python, Go, JavaScript, TypeScript e .NET,
-        sempre priorizando arquitetura sólida e código de fácil manutenção.
-      </p>
-
-      <div className="flex flex-wrap gap-4">
+      <div className="mt-10 flex flex-wrap items-center gap-4">
         <a
-          href="#experiencia"
-          className="rounded-sm bg-gold px-7 py-[0.85rem] font-sans text-sm font-medium tracking-wide text-bg"
+          href="#projetos"
+          className="group inline-flex items-center gap-3 border border-phosphor bg-phosphor/10 px-5 py-2.5 font-mono text-sm font-bold uppercase tracking-wider text-phosphor transition-all hover:bg-phosphor hover:text-bg hover:shadow-[0_0_24px_rgba(62,224,122,0.5)]"
         >
-          Ver experiência
+          <span>./ver_projetos</span>
+          <span className="transition-transform group-hover:translate-x-1">→</span>
         </a>
         <a
           href="#contato"
-          className="rounded-sm border border-hairline px-7 py-[0.85rem] font-sans text-sm font-medium tracking-wide text-ink"
+          className="inline-flex items-center gap-3 border border-line px-5 py-2.5 font-mono text-sm uppercase tracking-wider text-fg/70 transition-colors hover:border-fg hover:text-fg"
         >
-          Falar comigo
+          cat contato.txt
         </a>
       </div>
-    </section>
+    </header>
   );
 }
