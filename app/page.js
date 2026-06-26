@@ -4,6 +4,7 @@ import MapDivider from "@/components/MapDivider";
 import Sobre from "@/components/Sobre";
 import Timeline from "@/components/Timeline";
 import Skills from "@/components/Skills";
+import Articles from "@/components/Articles";
 import Contato from "@/components/Contato";
 import Footer from "@/components/Footer";
 
@@ -18,6 +19,8 @@ export default function HomePage() {
       <Timeline />
       <MapDivider label="stack" />
       <Skills />
+      <MapDivider label="artigos" />
+      <Articles />
       <MapDivider label="contato" />
       <Contato />
       <Footer />

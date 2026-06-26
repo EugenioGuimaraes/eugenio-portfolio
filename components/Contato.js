@@ -5,7 +5,7 @@ import { CONTACT_LINKS } from "@/lib/content";
 export default function Contato() {
   return (
     <RevealSection id="contato" className="pb-40">
-      <SectionLabel index="IV." title="Contato" />
+      <SectionLabel index="V." title="Contato" />
       <p className="mb-12 max-w-[680px] font-serif text-[clamp(26px,4vw,38px)] leading-[1.4] text-ink">
         Se quiser trocar uma ideia sobre arquitetura de sistemas, dados ou engenharia de
         software, <span className="italic text-gold">vamos conversar.</span>
