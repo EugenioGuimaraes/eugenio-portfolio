@@ -1,4 +1,4 @@
-# Portfólio — Eugenio Lobo
+# Portfólio  Eugenio Lobo
 
 Site de apresentação pessoal construído em Next.js 14 (App Router) + Tailwind CSS.
 
@@ -62,7 +62,7 @@ Textos que ficam direto no componente (não em `content.js`):
 ## Antes de publicar, revise
 
 - [ ] Email, LinkedIn e GitHub em `lib/content.js` (`CONTACT_LINKS`) ainda estão com
-      valores de exemplo — troque pelos seus reais
+      valores de exemplo   troque pelos seus reais
 - [ ] Confirme se as datas e descrições da seção "Trajetória técnica" refletem exatamente
       o que você quer comunicar
 - [ ] Rode `npm run build` uma vez antes de publicar para garantir que não há erros
@@ -70,7 +70,7 @@ Textos que ficam direto no componente (não em `content.js`):
 ## Stack utilizada neste projeto
 
 Next.js 14 (App Router), React 18, Tailwind CSS, fontes locais via Fontsource
-(Fraunces, Inter, JetBrains Mono — sem dependência de carregamento externo no build).
+(Fraunces, Inter, JetBrains Mono   sem dependência de carregamento externo no build).
 
 ## Hospedagem
 
