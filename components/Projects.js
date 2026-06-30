@@ -32,16 +32,28 @@ export default function Projects() {
             <p className="mb-4 text-sm leading-relaxed text-fg/60">
               {project.description}
             </p>
-            <ul className="flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <li
-                  key={tag}
-                  className="border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-fg/70"
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <ul className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <li
+                    key={tag}
+                    className="border border-line px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-fg/70"
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+              {project.href && (
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-[10px] uppercase tracking-wider text-phosphor/70 transition-colors hover:text-phosphor"
                 >
-                  {tag}
-                </li>
-              ))}
-            </ul>
+                  ver código →
+                </a>
+              )}
+            </div>
           </article>
         ))}
       </div>
