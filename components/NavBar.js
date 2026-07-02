@@ -18,7 +18,7 @@ export default function NavBar() {
         scrolled ? "border-b border-line bg-bg/90 backdrop-blur" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-content flex-wrap items-center justify-between gap-4 px-6 py-4 font-mono text-sm">
+      <div className="mx-auto flex w-full flex-wrap items-center justify-between gap-4 px-6 py-4 font-mono text-sm md:max-w-[90%]">
         <div className="flex items-center gap-1.5">
           <span className="text-phosphor terminal-glow">eugenio@portfolio</span>
           <span className="text-faint">:</span>

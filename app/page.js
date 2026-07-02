@@ -28,7 +28,7 @@ export default function HomePage() {
 
       <NavBar />
 
-      <div className="relative z-10 mx-auto max-w-content animate-flicker px-6">
+      <div className="relative z-10 mx-auto w-full px-6 animate-flicker md:max-w-[90%]">
         <Hero />
       </div>
 
