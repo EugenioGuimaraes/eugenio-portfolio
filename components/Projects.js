@@ -16,7 +16,7 @@ export default function Projects() {
             <div className="relative mb-5 overflow-hidden border border-line bg-card/30 transition-all group-hover:border-phosphor/60">
               <pre
                 aria-hidden="true"
-                className="aspect-video w-full overflow-hidden p-4 font-mono text-[10px] leading-tight text-phosphor/70 transition-colors group-hover:text-phosphor"
+                className="h-44 w-full overflow-hidden p-4 font-mono text-[10px] leading-tight text-phosphor/70 transition-colors group-hover:text-phosphor"
               >
                 {project.asciiArt}
               </pre>
